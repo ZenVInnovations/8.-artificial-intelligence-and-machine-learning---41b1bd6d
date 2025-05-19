@@ -1,0 +1,9 @@
+Proposed methodology
+
+The original product has to reach the end customer without any problems. The manufacturer has to produce the product and specify all the details of the product that includes product id, product name, manufacture date, manufacture year, manufacturer brand, manufacture address and many more information can be added to the list. The information is stored in the blockchain by creating a transaction. These all the items are converted into hash value using SHA-256 algorithm and a unique QR code is generated.  This QR code is pasted inside the product and shipped to the supplier.
+
+The supplier to check the authenticity of the product can scan the QR code and check the details of the product. He then adds up his information such as his address along with the manufacturer unique address to the blockchain and generates a unique serial number that is pasted on top of the product and shipped to the customer.
+
+The customer after receiving the product opens the website and enters the unique serial number and checks the details of the supplier and the manufacturer address and later he proceeds with the QR scan and verifies the product details along with manufacturer address from the supplier list.
+
+This whole process works as a bit of two-step verification, i.e., the unique serial number and QR scan both can be implemented for increasing the authenticity rate of the product.

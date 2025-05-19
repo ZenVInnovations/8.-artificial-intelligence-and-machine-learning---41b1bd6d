@@ -1,0 +1,75 @@
+Abstract:
+
+The fake products are moving into the market with a speeding rate affecting the manufacturer and consumers. According to the survey, the fake products have increased in recent years, that has affected the quality of the product, sales, profit, reputation and recognition of the company. Not only it has affected the company to make money, but also the counterfeiting has affected the consumer's ability to trust the product in the open market. There is no proper traceability and security of the goods by the companies so, this affects the trust of the consumer on the goods. This is happening because the manufacturing and distribution process is kept secret from the end user and this information will be easily manipulated by others. So, the end user needs a system to track the product from the manufacture till his door step. This research proposes a blockchain based counterfeit product identification system to make the product traceable throughout the supply chain. The public blockchain is used to store the information about the product in the blockchain network in the form of blocks that are immutable, tamper-proof, secure, transparent and trusted. The proposed method uses QR to make the product more secure.
+
+Keywords: Counterfeit, QR code, Blockchain, Supply chain.
+
+Introduction:
+
+The Counterfeit products problem is one of the most commonly faced problem by an every successful companies. This leads to the loss of profit margins and effects the company or brand reputation. The customers feel scammed or waste of money when they buy these counterfeit products unknowingly which do not meet the quality of the original product.
+Hence we indulge in this study to find an effective solution which helps us identify and remove any of the counterfeit products which are introduced throughout the supply chain by making use of relevant technologies like Blockchain. We feel implementing a system using blockchain which is decentralized, transparent and secure in nature, it is very effective against the counterfeit products. It provides a reliable and secure method to keep track of products to ensure the products authenticity. The blockchain records every transaction of a product and allows anyone with access to network verify it, allowing us to keep track of the product easily. Hence this study focuses on utilizing blockchain in supply chain that enables us to authenticate the original product. We will be using QR codes and encryption algorithms like SHA 256 to generate hash and create a QR code for each block which contains all necessary product details such as  serial number, name, brand, description and timestamp to verify the product. The use of smart contracts that allows us to automate the process and provide a user friendly GUI using React that allows admins, customers and manufacturers to add products and verify products easily. The updated work on the process is increasing the security and transparency on the system by adding two-step verification for the customers to ensure the quality of the product.
+
+
+
+Proposed Model:
+
+In this proposed model, the blockchain is used to identify the counterfeit product. The customer can check the product is authentic and can use the original products. This system provides a tamper-proof, secure and transparent environment for the end user to check the authenticity of the product.
+
+The actors in the system are manufacturer, supplier, retailer and consumer. The manufacturer has to place the product details into the blockchain, the product details such as serial number, name, brand, description about the product, and also the image is uploaded. The QR code is generated from the details that has been added to the blockchain and it is downloaded to paste it on the product. The details of the product are been added to the blockchain and a transaction is created.
+
+The supplier receives the product from the manufacturer, scans it to check the authenticity of the product. After verifying the product he then updates the product with his current location and timestamp, by doing this a transaction is created in the blockchain. He passes on the product to retailer.
+
+The retailer also verifies the authenticity of the product and again updates the product with his current location, timestamp and also updates the blockchain by adding is the product is sold or not, all these details will be converted into a transaction.
+
+Consumer to verify the authenticity of the product scans the QR code. After scanning, if the product is authentic it shows all the details of the product such as serial number, name, brand, description, image, location and timestamp of each actors. If it is not authentic or counterfeit it displays a message mentioning about the counterfeit product.
+
+To make it more secure, the model is implemented with two step verification with the QR code. By this the consumer gets double verified products and there will be no benefit of doubt on the system and the product.
+
+Two-step verification:
+
+This is implemented to cross verify the product's validity from the retailer to the customer. The retailer before sending the product to the end user, he verifies product's authenticity. And he also adds the product details such as, serial number, name, brand, description and image of the packaged product. The hash is generated using SHA256 algorithm from the details of the product and QR code is generated from the hash. The consumer can either enter the hash value manually or can scan the QR code, by this he gets the details of the retailer and the product. The end user verifies the product twice by scanning both QR codes.
+
+Backend Technologies:
+
+The testing and deployment of the smart contract is done in RemixIDE. Ganache is the test network, that contains the testing accounts with the public and private key and it also shows the block hash values. MetaMask wallet is used to transfer the gas value, in this the testnet accounts can be imported for testing of the smart contract.
+
+
+Smart Contract:
+
+The programs created for the blockchain are known as smart contracts. The first function, registerProduct, adds a new product into the blockchain with serial number, actor, location, timestamp.
+The second function, getProduct, this gives the product information to the end user by using the serial number. The details are fetched from the productHistory function that returns the  details of the product.
+The third function, addProductHistory, this function is used to add the product details and it returns the product details by calling it.
+
+Related work:
+
+The manufacturer will provide the QR code attached to the product and that QR code will check the product is original or duplicate. After attaching the QR on the product it is shipped to the supplier, here they will verify the item by scanning the QR code to get the item details such as, time, date and location. The supplier will ship the item for retailer, once the retailer receives the product he will verify the item again by scanning the QR code after the verification as been done he can the update the current address and sent the product for the ordered customers. The customer scans the QR code and will get all the details provided by the manufacturer, according to this process the customer will get to know that the product or purchased item is original. After that he can make payment for the purchased goods. Here each and every transactions are verified at every step through blockchain and also the transactions are stored on the blockchain database which helps to track the product details and previous transaction details.
+
+Blockchain ledger, this system is utilized to store product-related details such as manufacturing details, shipping details, product ID, Batch ID, this are the recorded in blockchain. Next step is to integrate QR Code which is generated for each product, containing blockchain verified data, this unique QR Code is attached in the blockchain. Then next step involves in verification process for customers using the QR code given on the product, end-users can scan and authenticate the product, the application fetches the product detail`s and displays whether the product is genuine. When it comes to supply chain which involves distributor and retailer use the application to update product movement or sale status, to ensure the logged data is immutable. Blockchain technology involves “Decentralized Data Handling” data is transparent and tamper proof, reducing the chances of manipulation. This methodology ensures the product details entered into the blockchain ledger cannot be altered or manipulated, this provides secure way to avoid counterfeit products from entering the market.
+
+The [An_Ethereum_based_Fake_Product_Identification_System_using_Smart_Contract.pdf] proposes a system where there is a communication between the customer and all involved components and through GUI allows them to see their details, check authenticity of the product by scanning the serial number. This system allows admin to add product details and serial number or admin can allow manufacturer to do the same and generate block and store the data in database. Then the user can authenticate the product using the serial number. At the back end the serial number is compared to the stored blocks. It makes use of smart contracts to verify the authenticity of product.
+This system has major modules like "Customer UI Authorization" which is responsible for user and admin login and authorization of the system for them to add details and verify them. "Product Information Database" this module is responsible for storing data and adds immutable entry to the table whenever the product is scanned.
+
+
+This [Designing_A_Secure_Fake_Products_....] is a system where unique QR codes are generated for the product using it's details. The system makes use of smart contracts to manage the product information. This system focuses on providing transparency throughout the supply chain. The manufacturer adds his product with details to the system and unique QR code is generated for the product. The customer can login and scan the QR code and then the QR code is compared to the one with manufacturer to verify. Used android studio to scan the QR code.
+The point of failure in the QR code system is cracking the QR generation information. 
+
+The fake product is identified and is possible to stop it in the market using the blockchain. The product details are stored in the blockchain ledger and the QR code is generated, the smart contract is used to examine products unique identification code and its transaction history to confirm the legitimacy of the product. The QR code is scanned by the end user to check the authenticity of the product. 
+
+The QR code is implemented for the verification of the product. This method in future may be affected by tracking the process of QR code generation.  
+
+Conclusion and Future Work:
+
+The implementation of a counterfeit product identification system is an essential way towards protecting the reputation of the companies and ensuring the safety of the consumers.
+The use of advanced technologies such as blockchain, QR codes improves the accuracy and efficiency of system. This makes more difficult for the counterfeiters to breach the system, as there are multiple security and verification layers that makes them difficult to mislead the consumers. Therefore, implementing the counterfeit product identification system will be helpful and advantageous for both consumers and manufacturers and this is a good investment for the current global market.
+
+Additionally, to make this system more secure we can implement with digital signatures these involve using cryptographic techniques for the QR codes to create a more secure and tamper-proof QR codes. And also have to check any alternatives for improving the scalability of the system, as there will be more information to enter into the system to make it more precise about the product details. By this we can improve the transparency and accountability of the system.  
+
+  
+
+
+
+
+
+
+
+           
