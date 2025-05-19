@@ -1,5 +1,0 @@
-applications:
-  - name: ai-document-analyzer
-    memory: 256M
-    buildpack: python_buildpack
-    command: python app.py
