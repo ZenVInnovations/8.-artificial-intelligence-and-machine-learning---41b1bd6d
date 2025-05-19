@@ -1,0 +1,127 @@
+Extracted Text:
+ 
+SATISH MALLAPPA B PATIL 
+satishpatilmlb@gmail.com | +91-8050517413 | LINKEDIN PROFILE 
+ 
+Summary 
+  
+Highly motivated and passionate with excellent communication skill, strong problem-solving skills and the ability 
+to think critically and analytically, Enthusiasm for learning and staying updated with the latest advancements. 
+ 
+ 
+Education 
+ 
+B M S Institute of Technology and Management, India    
+ 
+                                                               2021 - 2025 
+● Computer Science and Engineering | CGPA: 9.3 
+ 
+ 
+  
+ 
+ 
+       
+BIPS PU Science College, India 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+            2019 - 2021 
+● State Board, PCMB: 97% 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+Basaveshwara International Public School, India  
+ 
+ 
+ 
+ 
+ 
+ 
+            2018 - 2019 
+● CBSE (Class X), Percentage:91.5%   
+ 
+ 
+ 
+ 
+                
+                   
+ 
+Skills 
+ 
+C | C++ | HTML | CSS | JavaScript | Blockchain | Solidity | SQL  
+ 
+Projects 
+ 
+Decentralized Land Registry 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+          Apr 2024 – Aug 2024 
+● This project is based on blockchain, built to reduce the paper work and the problems faced from the middlemen. 
+● Utilizes Ethereum blockchain for secure and transparent registering land details, ensuring reliability. 
+● Features a web3 technology for the decentralized application. 
+● Languages – Solidity, NodeJS, JavaScript 
+ 
+BMSIT Airlines 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+           
+ 
+            Oct 2023 – Dec2023 
+● It is a web-based platform designed to book airline tickets to travel across the globe. 
+● It includes a dashboard for booking tickets, checking flights, and canceling tickets. And from the administration 
+dashboard it has adding flights, deleting flights, checking booked flights. 
+● Languages – SQL, php. 
+ 
+Languages 
+ 
+English | Kannada | Hindi 
+ 
+Coursework 
+ 
+Data Structures and Algorithms 
+OOPS 
+Web Development 
+Computer Networks 
+Operating System 
+Database Management System 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+Keywords:
+- SATISH MALLAPPA B PATIL (Relevance: 0.699858)
+- web-based platform (Relevance: 0.662773)
+- excellent communication skill (Relevance: 0.660132)
+- strong problem-solving skills (Relevance: 0.640206)
+- State Board (Relevance: 0.583408)
+
+Entities:
+- satishpatilmlb@gmail.com (EmailAddress) (Relevance: 0.949359)
+- B M S Institute of Technology and Management (Organization) (Relevance: 0.822441)
+- 2021 - 2025 (Date) (Relevance: 0.779799)
+- ● Computer Science and Engineering (Organization) (Relevance: 0.769606)
+- BIPS PU Science College (Organization) (Relevance: 0.743682)

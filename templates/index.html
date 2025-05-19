@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Document Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h2, h3 {
+            color: #006064;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 150, 136, 0.3);
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+
+        pre {
+            background-color: #eceff1;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 800px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+            max-width: 800px;
+        }
+
+        li {
+            background: #ffffff;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 6px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <h2>📄 AI Document Analyzer & Keyword Extractor</h2>
+
+    <form id="upload-form" enctype="multipart/form-data">
+        <label>Select a document (.jpg, .jpeg, .png, .pdf, .txt):</label><br><br>
+        <input type="file" name="file" accept=".jpg,.jpeg,.png,.pdf,.txt" required>
+        <br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    <h3>📝 Extracted Text:</h3>
+    <pre id="output-text"></pre>
+<button id="download-btn" style="display:none;">Download Extracted Text</button>
+
+
+    <h3>🔑 Keywords:</h3>
+    <ul id="keywords-list"></ul>
+
+    <h3>🏷️ Entities:</h3>
+    <ul id="entities-list"></ul>
+
+<!-- Download Button -->
+<div id="download-section" style="display:none; margin-top: 20px;">
+    <h3>Download:</h3>
+    <a id="download-link" href="#" download>
+        <button type="button">Download Analysis Result</button>
+    </a>
+</div>
+
+
+    <script>
+        
+    document.getElementById('upload-form').onsubmit = async function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const res = await fetch('/analyze', {
+            method: 'POST',
+            body: formData
+        });
+
+        const data = await res.json();
+
+        const outputText = data.text || "No text extracted.";
+        document.getElementById('output-text').innerText = outputText;
+
+        // Show download button
+        const downloadBtn = document.getElementById('download-btn');
+        downloadBtn.style.display = 'inline-block';
+
+        // Handle download logic
+        downloadBtn.onclick = function () {
+            const blob = new Blob([outputText], { type: "text/plain" });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = "analyzed_text.txt";
+            link.click();
+        };
+
+        const keywordsList = document.getElementById('keywords-list');
+        keywordsList.innerHTML = "";
+        (data.keywords || []).forEach(k => {
+            keywordsList.innerHTML += `<li>${k.text} (Relevance: ${k.relevance})</li>`;
+        });
+
+        const entitiesList = document.getElementById('entities-list');
+        entitiesList.innerHTML = "";
+        (data.entities || []).forEach(e => {
+            entitiesList.innerHTML += `<li>${e.text} - ${e.type} (Relevance: ${e.relevance})</li>`;
+        });
+// Show download button
+document.getElementById('download-link').href = data.download_url;
+document.getElementById('download-section').style.display = 'block';
+
+    };
+
+
+    </script>
+</body>
+</html>
